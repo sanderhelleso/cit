@@ -57,7 +57,7 @@ function branch(name, options) {
 		if (!changed) {
 			return error('Failed to change branch');
 		} else {
-			success('Successfully changed to branch' + chalk.bold(name));
+			success('Successfully changed to branch' + chalk.blue.underline.bold(name));
 		}
 	}
 }
@@ -79,7 +79,7 @@ function commit(message, { add }) {
 	if (!committed) {
 		error('Git commit failed');
 	} else {
-		success('Successfully commited to ' + chalk.bold(branch));
+		success('Successfully commited to ' + chalk.blue.underline.bold(branch));
 	}
 }
 
