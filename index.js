@@ -44,8 +44,6 @@ function commit(message, { add }) {
 	const git_message = `${branch}: ${message}`;
 	const committed = exe(`git commit -m "${git_message}"`);
 
-	console.log(committed);
-
 	if (!committed) {
 		error('Git commit failed');
 	} else {
