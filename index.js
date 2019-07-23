@@ -55,7 +55,7 @@ function commit(message, { add }) {
 
 function exe(command) {
 	const cmd = shell.exec(command);
-	return cmd.code !== 0;
+	return !cmd.code;
 }
 
 function error(msg) {
