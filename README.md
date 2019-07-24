@@ -1,9 +1,14 @@
 <h1 align="center">CIT</h1>
 
+<p align="center">
+<b>Automatically add branch to commit message | add, commit and push in one command | quick git.</b><br>
+<sub>cit c "npm install me" -n</sub>
+</p>
+
 <br>
 
 <p align="center">
-<b>Automatically add branch to commit message | add, commit and push in one command | quick git.</b><br>
+<b>Auto add branch to commit message, add, commit and push in one command, quick git</b><br>
 <sub>cit c "npm install me" -n</sub>
 </p>
 
