@@ -69,7 +69,9 @@ function add(hidePre) {
 function push(options, hidePre) {
 	if (!hidePre) showPreBranch();
 
-	const pushed = exe(`git push origin ${stripSpace(options.branch)}`);
+	const branch = options.branch || options;
+
+	const pushed = exe(`git push origin ${stripSpace(branch)}`);
 	if (!pushed) {
 		error('Failed to push commit to branch');
 	} else {
