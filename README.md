@@ -31,6 +31,8 @@ $ npm install @sanderhelleso/cit -g
 
 <p>Add all new git changes in current directory to current branch</p>
 
+<br>
+
 ```sh
 $ cit a
 ```
@@ -55,31 +57,33 @@ $ cit l
 
 <p>Commit to current branch with branch name prefixed to commit message</p>
 
-Commit
+<br>
+
+<sub>Commit</sub>
 ```sh
 $ cit c "message"
 ```
 
-Commit and add 
+<sub>Commit and add</sub> 
 ```sh
 $ cit c "message" -a
 ```
 
-Commit, add and push
+<sub>Commit, add and push</sub>
 ```sh
 $ cit c "message" -a -p "branch"
 ```
 
-### Show current branch
+### Checkout branch
 
 <p>Checkout to provided branch or create a new branch</p>
 
-Checkout existing branch
+<sub>Checkout existing branch</sub>
 ```sh
 $ cit b "name"
 ```
 
-Checkout new branch
+<sub>Checkout new branch</sub>
 ```sh
 $ cit b "name" -n
 ```
