@@ -73,9 +73,9 @@ function push(options, hidePre) {
 
 	const pushed = exe(`git push origin ${stripSpace(branch)}`);
 	if (!pushed) {
-		error('Failed to push commit to branch');
+		error(`Failed to push to branch ${branch}`);
 	} else {
-		success('Successfully pushed commit to branch!');
+		success(`Successfully pushed to branch ${branch}!`);
 	}
 }
 
