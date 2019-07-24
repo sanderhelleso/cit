@@ -17,7 +17,11 @@ program
 	.description('Add all new git changes in current directory to current branch')
 	.action(add);
 
-program.command('push').alias('p').description('Pushes all commits to branch').action(push);
+program
+	.command('push <branch>')
+	.alias('p')
+	.description('Pushes all commits to specified branch from the current branch')
+	.action(push);
 
 program
 	.command('list')
@@ -29,7 +33,7 @@ program
 	.command('commit <message>')
 	.alias('c')
 	.option('-a, --add', 'Add all files to git before committing')
-	.option('-p, --push', 'Pushes commit to current branch')
+	.option('-p, --push <branch>', 'Pushes commit to specified branch')
 	.description('Commit to current branch with branch name prefixed to commit message')
 	.action(commit);
 
@@ -62,10 +66,10 @@ function add(hidePre) {
 	return true;
 }
 
-function push(hidePre) {
+function push(options, hidePre) {
 	if (!hidePre) showPreBranch();
 
-	const pushed = exe(`git push origin ${getBranch()}`);
+	const pushed = exe(`git push origin ${options.branch}`);
 	if (!pushed) {
 		error('Failed to push commit to branch');
 		return false;
@@ -116,7 +120,7 @@ function commit(message, options) {
 	}
 
 	if (options.push) {
-		push(true);
+		push(options.push, true);
 	}
 }
 
