@@ -31,46 +31,8 @@ $ npm install @sanderhelleso/cit -g
 
 ## ❯ Usage
 
-### Add all changes to current branch
 
-<p>Add all new git changes in current directory to current branch</p>
-
-<br>
-
-```sh
-$ cit a
-```
-
-<br>
-
-
-### Push all commits to branch
-
-<p>Pushes all commits to specified branch from the current branch</p>
-
-<br>
-
-```sh
-$ cit p "name"
-```
-
-<br>
-
-
-### Show current branch
-
-<p>Shows the current git branch of the current git project</p>
-
-<br>
-
-```sh
-$ cit l
-```
-
-<br>
-
-
-### Show current branch
+### Commit
 
 <p>Commit to current branch with branch name prefixed to commit message</p>
 
@@ -108,6 +70,44 @@ $ cit b "name"
 <sub>Checkout new branch</sub>
 ```sh
 $ cit b "name" -n
+```
+
+<br>
+
+### Add all changes to current branch
+
+<p>Add all new git changes in current directory to current branch</p>
+
+<br>
+
+```sh
+$ cit a
+```
+
+<br>
+
+
+### Push all commits to branch
+
+<p>Pushes all commits to specified branch from the current branch</p>
+
+<br>
+
+```sh
+$ cit p "name"
+```
+
+<br>
+
+
+### Show current branch
+
+<p>Shows the current git branch of the current git project</p>
+
+<br>
+
+```sh
+$ cit l
 ```
 
 <br>
