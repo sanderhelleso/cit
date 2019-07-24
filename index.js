@@ -17,6 +17,8 @@ program
 	.description('Add all new git changes in current directory to current branch')
 	.action(add);
 
+program.command('push').alias('p').description('Pushes all commits to branch').action(push);
+
 program
 	.command('list')
 	.alias('l')
@@ -27,6 +29,7 @@ program
 	.command('commit <message>')
 	.alias('c')
 	.option('-a, --add', 'Add all files to git before committing')
+	.option('-p, --push', 'Pushes commit to current branch')
 	.description('Commit to current branch with branch name prefixed to commit message')
 	.action(commit);
 
@@ -46,8 +49,8 @@ function listBranch() {
 	log(`Current branch: ${chalk.yellow(getBranch())}`);
 }
 
-function add() {
-	showPreBranch();
+function add(hidePre) {
+	if (!hidePre) showPreBranch();
 
 	const added = exe('git add .');
 	if (!added) {
@@ -56,6 +59,19 @@ function add() {
 	}
 
 	success('Added changes to commit!');
+	return true;
+}
+
+function push(hidePre) {
+	if (!hidePre) showPreBranch();
+
+	const pushed = exe(`git push origin ${getBranch()}`);
+	if (!pushed) {
+		error('Failed to push commit to branch');
+		return false;
+	}
+
+	success('Successfully pushed commit to branch!');
 	return true;
 }
 
@@ -85,7 +101,7 @@ function commit(message, options) {
 	showPreBranch();
 
 	if (options.add) {
-		const added = add();
+		const added = add(true);
 		if (!added) return;
 	}
 
@@ -97,6 +113,10 @@ function commit(message, options) {
 		error('Git commit failed');
 	} else {
 		success(`Successfully committed to ${branch}!`);
+	}
+
+	if (options.push) {
+		push(true);
 	}
 }
 
