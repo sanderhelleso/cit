@@ -118,7 +118,7 @@ function commit(message, options) {
 	}
 
 	if (options.push) {
-		push(options.push, true);
+		push(options.branch, true);
 	}
 }
 
@@ -128,7 +128,8 @@ function exe(command) {
 }
 
 function stripSpace(str) {
-	return str.replace(/ /g, '_');
+	const stripped = str.replace(/ /g, '_');
+	return stripped;
 }
 
 function getBranch() {
