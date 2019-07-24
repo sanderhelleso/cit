@@ -7,7 +7,7 @@ const log = console.log;
 
 module.exports = () => {
 	const program = new commander.Command();
-	program.version('1.0.4');
+	program.version('1.0.5');
 
 	program
 		.command('add')
@@ -53,7 +53,7 @@ module.exports = () => {
 	function listBranch() {
 		showPreBranch();
 
-		log(`Current branch: ${chalk.yellow(getBranch())}\n`);
+		log(`Current branch: ${chalk.yellow(getBranch())}`);
 	}
 
 	function add(hidePre) {

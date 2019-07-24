@@ -1,6 +1,6 @@
 {
 	"name": "@sanderhelleso/cit",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Quick git for branch controll and speed",
 	"main": "index.js",
 	"preferGlobal": true,
