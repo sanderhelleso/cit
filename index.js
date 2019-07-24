@@ -157,6 +157,6 @@ module.exports = () => {
 	}
 
 	function success(msg) {
-		log(chalk.bold.green(`✅  ${msg}\n`));
+		log(chalk.bold.green(`✅  ${msg}`));
 	}
 };
