@@ -5,11 +5,11 @@ const chalk = require('chalk');
 const figlet = require('figlet');
 const log = console.log;
 
-log(chalk.yellow(figlet.textSync('CIT', { horizontalLayout: 'full' })));
-log(chalk.bold(chalk.white('🔥  Quick git commits for branch controll 🔥\n')));
-
 const program = new commander.Command();
-program.version('1.0.0').description('CIT - Quick git commits for branch controll');
+program.version('1.0.0');
+
+log(chalk.yellow(figlet.textSync('CIT', { horizontalLayout: 'full' })));
+log(chalk.bold(chalk.white('🔥  Quick git for branch controll and speed 🔥\n')));
 
 program
 	.command('add')
@@ -34,10 +34,11 @@ program
 	.command('branch <name>')
 	.alias('b')
 	.option('-n, --new', 'Create a new branch')
-	.description('Navigate to provided branch or creates a new')
+	.description('Navigate to provided branch or create a new branch')
 	.action(branch);
 
 program.parse(process.argv);
+if (!program.args.length) program.help();
 
 function listBranch() {
 	showPreBranch();
