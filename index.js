@@ -7,7 +7,7 @@ const log = console.log;
 
 module.exports = () => {
 	const program = new commander.Command();
-	program.version('1.0.5');
+	program.version('1.0.5'); //
 
 	program
 		.command('add')
