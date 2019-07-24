@@ -73,9 +73,9 @@ function push(options, hidePre) {
 
 	const pushed = exe(`git push origin ${stripSpace(branch)}`);
 	if (!pushed) {
-		error(`Failed to push to branch ${branch}`);
+		error(`Failed to push to branch '${branch}'`);
 	} else {
-		success(`Successfully pushed to branch ${branch}!`);
+		success(`Successfully pushed to branch '${branch}'!`);
 	}
 }
 
@@ -89,14 +89,14 @@ function branch(name, options) {
 		if (!created) {
 			return error('Failed to create new branch');
 		} else {
-			success(`Successfully created new branch ${name}!`);
+			success(`Successfully created new branch '${name}'!`);
 		}
 	} else {
 		const changed = exe(`git checkout ${name}`);
 		if (!changed) {
 			return error('Failed to change branch');
 		} else {
-			success(`Successfully changed to branch ${name}!`);
+			success(`Successfully changed to branch '${name}'!`);
 		}
 	}
 }
@@ -116,7 +116,7 @@ function commit(message, options) {
 	if (!committed) {
 		error('Git commit failed');
 	} else {
-		success(`Successfully committed to ${branch}!`);
+		success(`Successfully committed to '${branch}'!`);
 	}
 
 	if (options.push) {
