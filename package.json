@@ -1,23 +1,28 @@
 {
-  "name": "cit",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sanderhelleso/cit.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sanderhelleso/cit/issues"
-  },
-  "homepage": "https://github.com/sanderhelleso/cit#readme",
-  "dependencies": {
-    "commander": "^2.20.0",
-    "current-git-branch": "^1.1.0"
-  }
+	"name": "cit",
+	"version": "1.0.0",
+	"description": "Quick git commits for branch controll",
+	"main": "index.js",
+	"preferGlobal": true,
+	"bin": "./index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sanderhelleso/cit.git"
+	},
+	"author": "Sander Hellesø",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/sanderhelleso/cit/issues"
+	},
+	"homepage": "https://github.com/sanderhelleso/cit",
+	"dependencies": {
+		"chalk": "^2.4.2",
+		"commander": "^2.20.0",
+		"current-git-branch": "^1.1.0",
+		"figlet": "^1.2.3",
+		"shelljs": "^0.8.3"
+	}
 }
