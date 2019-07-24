@@ -1,4 +1,4 @@
-<h1 align="center">CIT</h1>
+<h1 align="center">CIT - Quick Git</h1>
 
 <p align="center">
 <b>Automatically add branch to commit message | add, commit and push in one command | quick git.</b><br>
@@ -15,9 +15,8 @@
 <br>
 <br>
 
-Created by [jonschlinkert](https://github.com/sanderhelleso), CIT is tiny and easy to use. It aims to increase the git flow where structured commits and branches are required.
+Created by [sanderhelleso](https://github.com/sanderhelleso), CIT is tiny and easy to use. It aims to increase the git flow where structured commits and branches are required.
 
-<br>
 <br>
 
 ## ❯ Install
@@ -98,3 +97,6 @@ $ cit b "name"
 ```sh
 $ cit b "name" -n
 ```
+
+## ❯ LICENCE
+MIT
