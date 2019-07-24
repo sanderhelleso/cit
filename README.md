@@ -8,11 +8,6 @@
 <br>
 
 <p align="center">
-<b>Auto add branch to commit message, add, commit and push in one command, quick git</b><br>
-<sub>cit c "npm install me" -n</sub>
-</p>
-
-<p align="center">
 <a href="https://www.npmjs.com/package/@sanderhelleso/cit">
 <img src="https://github.com/sanderhelleso/cit/blob/master/preview/preview.gif" alt="version">
 </a>
