@@ -9,7 +9,7 @@
 
 <p align="center">
 <a href="https://www.npmjs.com/package/@sanderhelleso/cit">
-<img src="https://github.com/sanderhelleso/cit/blob/master/preview/preview.gif" alt="version">
+<img src="https://firebasestorage.googleapis.com/v0/b/semanta-dabd0.appspot.com/o/semanta%2Fpreview.gif?alt=media&token=4c818c7f-3551-4e6d-9f55-aba2794f1f1b" alt="version">
 </a>
 
 <br>
