@@ -12,6 +12,12 @@ const program = new commander.Command();
 program.version('1.0.0').description('CIT - Quick git commits for branch controll');
 
 program
+	.command('add')
+	.alias('a')
+	.description('Add all new git changes in current directory to current branch')
+	.action(add);
+
+program
 	.command('list')
 	.alias('l')
 	.description('Shows the current git branch of the current git project')
@@ -33,16 +39,28 @@ program
 
 program.parse(process.argv);
 
-function getBranch() {
-	const branch = branchName();
-	return branch ? branch : 'Master';
-}
-
 function listBranch() {
+	showPreBranch();
+
 	log(`Current branch: ${chalk.yellow(getBranch())}`);
 }
 
+function add() {
+	showPreBranch();
+
+	const added = exe('git add .');
+	if (!added) {
+		error('Failed to add changes to git');
+		return false;
+	}
+
+	success('Added changes to commit!');
+	return true;
+}
+
 function branch(name, options) {
+	showPreBranch();
+
 	name = name.replace(/ /g, '_');
 
 	if (options.new) {
@@ -62,14 +80,12 @@ function branch(name, options) {
 	}
 }
 
-function commit(message, { add }) {
-	if (add) {
-		const added = exe('git add .');
-		if (!added) {
-			return error('Git add failed');
-		} else {
-			success('added to commit!');
-		}
+function commit(message, options) {
+	showPreBranch();
+
+	if (options.add) {
+		const added = add();
+		if (!added) return;
 	}
 
 	const branch = getBranch();
@@ -86,6 +102,15 @@ function commit(message, { add }) {
 function exe(command) {
 	const cmd = shell.exec(command);
 	return !cmd.code;
+}
+
+function getBranch() {
+	const branch = branchName();
+	return branch ? branch : 'Master';
+}
+
+function showPreBranch() {
+	console.log(`🌿  ${chalk.gray(getBranch())}`);
 }
 
 function error(msg) {
