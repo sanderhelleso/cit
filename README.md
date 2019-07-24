@@ -10,8 +10,22 @@
 <br>
 
 <p align="center">
-<b>Automatically add branch to commit message, add, commit and push in one command, quick git.</b><br>
+<b>Automatically add branch to commit message | add, commit and push in one command | quick git.</b><br>
 <sub>cit c "npm install me" -n</sub>
 </p>
 
 <br>
+
+## ❯ Install
+
+Install with [npm](https://www.npmjs.com/):
+
+```sh
+$ npm install @sanderhelleso/cit -g
+```
+
+<br>
+
+## ❯ Usage
+
+### Single prompt
