@@ -53,7 +53,7 @@ module.exports = () => {
 	function listBranch() {
 		showPreBranch();
 
-		log(`Current branch: ${chalk.yellow(getBranch())}\n`);
+		log(`Current branch: ${chalk.yellow(getBranch())}`);
 	}
 
 	function add(hidePre) {
