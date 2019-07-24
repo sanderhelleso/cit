@@ -1,4 +1,4 @@
-<h1 align="center">CIT - Quick Git</h1>
+<h1 align="center">CIT</h1>
 
 <p align="center">
 <b>Automatically add branch to commit message | add, commit and push in one command | quick git.</b><br>
@@ -15,7 +15,7 @@
 <br>
 <br>
 
-CIT is tiny and easy to use. It aims to increase the git flow where structured commits and branches are required. 
+💅 CIT is tiny and easy to use. It aims to increase the git flow where structured commits and branches are required. 
 
 <br>
 
