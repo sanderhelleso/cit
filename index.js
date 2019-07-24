@@ -82,7 +82,7 @@ function push(options, hidePre) {
 function branch(name, options) {
 	showPreBranch();
 
-	name = stripSpace();
+	name = stripSpace(name);
 
 	if (options.new) {
 		const created = exe(`git checkout -b ${name}`);
