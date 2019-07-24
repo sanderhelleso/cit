@@ -15,6 +15,11 @@
 <br>
 <br>
 
+Created by [jonschlinkert](https://github.com/sanderhelleso), CIT is tiny and easy to use. It aims to increase the git flow where structured commits and branches are required.
+
+<br>
+<br>
+
 ## ❯ Install
 
 Install with [npm](https://www.npmjs.com/):
@@ -37,6 +42,8 @@ $ npm install @sanderhelleso/cit -g
 $ cit a
 ```
 
+<br>
+
 ### Push all commits to branch
 
 <p>Pushes all commits to specified branch from the current branch</p>
@@ -45,6 +52,8 @@ $ cit a
 $ cit p "name"
 ```
 
+<br>
+
 ### Show current branch
 
 <p>Shows the current git branch of the current git project</p>
@@ -52,6 +61,8 @@ $ cit p "name"
 ```sh
 $ cit l
 ```
+
+<br>
 
 ### Show current branch
 
