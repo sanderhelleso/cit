@@ -15,7 +15,7 @@
 <br>
 <br>
 
-Created by [sanderhelleso](https://github.com/sanderhelleso), CIT is tiny and easy to use. It aims to increase the git flow where structured commits and branches are required.
+Created by [sanderhelleso](https://github.com/sanderhelleso), CIT is tiny and easy to use. It aims to increase the git flow where structured commits and branches are required. Automatically makes your commit messages tracable forever by appending the current branch name to commits.
 
 <br>
 
@@ -41,8 +41,6 @@ $ npm install @sanderhelleso/cit -g
 $ cit a
 ```
 
-<br>
-
 ### Push all commits to branch
 
 <p>Pushes all commits to specified branch from the current branch</p>
@@ -51,8 +49,6 @@ $ cit a
 $ cit p "name"
 ```
 
-<br>
-
 ### Show current branch
 
 <p>Shows the current git branch of the current git project</p>
@@ -60,8 +56,6 @@ $ cit p "name"
 ```sh
 $ cit l
 ```
-
-<br>
 
 ### Show current branch
 
@@ -97,6 +91,8 @@ $ cit b "name"
 ```sh
 $ cit b "name" -n
 ```
+
+<br>
 
 ## ❯ LICENCE
 MIT
