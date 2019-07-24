@@ -118,7 +118,7 @@ function commit(message, options) {
 	}
 
 	if (options.push) {
-		push(options.branch, true);
+		push(options.push, true);
 	}
 }
 
