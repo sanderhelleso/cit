@@ -15,7 +15,7 @@
 <br>
 <br>
 
-Created by [sanderhelleso](https://github.com/sanderhelleso), CIT is tiny and easy to use. It aims to increase the git flow where structured commits and branches are required. Automatically makes your commit messages tracable forever by appending the current branch name to commits.
+CIT is tiny and easy to use. It aims to increase the git flow where structured commits and branches are required. 
 
 <br>
 
@@ -45,6 +45,8 @@ $ cit a
 
 <p>Pushes all commits to specified branch from the current branch</p>
 
+<br>
+
 ```sh
 $ cit p "name"
 ```
@@ -52,6 +54,8 @@ $ cit p "name"
 ### Show current branch
 
 <p>Shows the current git branch of the current git project</p>
+
+<br>
 
 ```sh
 $ cit l
@@ -81,6 +85,8 @@ $ cit c "message" -a -p "branch"
 ### Checkout branch
 
 <p>Checkout to provided branch or create a new branch</p>
+
+<br>
 
 <sub>Checkout existing branch</sub>
 ```sh
