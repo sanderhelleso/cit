@@ -1,4 +1,4 @@
-<h1 align="center">💅 CIT</h1>
+<h1 align="center">CIT</h1>
 
 <p align="center">
 <b>Automatically add branch to commit message | add, commit and push in one command | quick git.</b><br>
