@@ -69,20 +69,18 @@ function add(hidePre) {
 function push(options, hidePre) {
 	if (!hidePre) showPreBranch();
 
-	const pushed = exe(`git push origin ${options.branch}`);
+	const pushed = exe(`git push origin ${stripSpace(options.branch)}`);
 	if (!pushed) {
 		error('Failed to push commit to branch');
-		return false;
+	} else {
+		success('Successfully pushed commit to branch!');
 	}
-
-	success('Successfully pushed commit to branch!');
-	return true;
 }
 
 function branch(name, options) {
 	showPreBranch();
 
-	name = name.replace(/ /g, '_');
+	name = stripSpace();
 
 	if (options.new) {
 		const created = exe(`git checkout -b ${name}`);
@@ -127,6 +125,10 @@ function commit(message, options) {
 function exe(command) {
 	const cmd = shell.exec(command);
 	return !cmd.code;
+}
+
+function stripSpace(str) {
+	return str.replace(/ /g, '_');
 }
 
 function getBranch() {
