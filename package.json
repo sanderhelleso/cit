@@ -1,10 +1,13 @@
 {
-	"name": "cit",
-	"version": "1.0.0",
-	"description": "Quick git commits for branch controll",
+	"name": "@sanderhelleso/cit",
+	"version": "1.0.4",
+	"description": "Quick git for branch controll and speed",
 	"main": "index.js",
 	"preferGlobal": true,
-	"bin": "./index.js",
+	"bin": {
+		"cit": "bin/index.js"
+	},
+	"keywords": [ "git", "branch", "commit" ],
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -17,7 +20,7 @@
 	"bugs": {
 		"url": "https://github.com/sanderhelleso/cit/issues"
 	},
-	"homepage": "https://github.com/sanderhelleso/cit",
+	"homepage": "https://github.com/sanderhelleso/cit#readme",
 	"dependencies": {
 		"chalk": "^2.4.2",
 		"commander": "^2.20.0",
