@@ -2,7 +2,7 @@
 
 <p align="center">
 <b>Automatically add branch to commit message | add, commit and push in one command | quick git.</b><br>
-<sub>cit c "npm install me" -n</sub>
+<sub>cit b "npm install me" -n</sub>
 </p>
 
 <br>
